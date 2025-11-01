@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apex Advocates</title>
+  <!-- favicon -->
+    <link rel="icon" href="Image/Dr. Edmond Fernandes            Official.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Neuton Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+     <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="font-[Slabo]">
+   <header class="text-center">
+        <a href="index.php"><div class="logo mx-auto w-[380px] lg:w-[700px] mb-2 mt-7">
+            <h1 class="text-3xl lg:text-5xl text-black-500 uppercase">Apex Advocates</h1>
+        </div></a>
+        <div class="header-text">
+            
+        </div>
+        </header>
+ <!-- Navigation Bar -->
+  <header class="sticky top-0 z-10 bg-white">
+    <nav class="navbar">
+      <button class="menu-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul id="navMenu">
+        <li class="dropdown">
+          <a href="index.php" class="dropdown-toggle">HOME</a>
+        </li>
+        <li class="dropdown">
+          <a href="about.html" class="dropdown-toggle">ABOUT US</a>
+        </li>
+        <li class="dropdown">
+          <a href="service.html" class="dropdown-toggle">AREAS OF SERVICE</a>
+        </li>
+        <li class="dropdown">
+          <a href="achievements.html" class="dropdown-toggle">ACHIEVEMENTS</a>
+        </li>
+         <li class="dropdown">
+          <a href="articles.php" class="dropdown-toggle">ARTICLES</a>
+        </li>
+        <li class="dropdown">
+          <a href="research.php" class="dropdown-toggle">RESEARCH PAPERS</a>
+        </li>
+        <li class="dropdown">
+          <a href="media.php" class="dropdown-toggle">MEDIA</a>
+          <li class="dropdown">
+          <a href="contact.html" class="dropdown-toggle">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <hr class="border-gray-300"/>
+
+  <!-- Research Publications Section -->
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-2xl lg:text-3xl font-bold mb-8 text-center">ACHIEVEMENTS</h1>
+<div class="image-row">
+  <img src="image/Achivements.jpeg" alt="Achivements 1">
+  <img src="image/certificate.jpg" alt="certificate">
+</div>
+
+<style>
+  .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px; /* adds space below */
+  }
+
+  .image-row img {
+    width: 23%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .image-row img {
+      width: 48%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .image-row img {
+      width: 98%;
+    }
+  }
+</style>
+
+  
+
+<footer style="background-color: #f2f2f2; padding: 20px 0; text-align: center; font-size: 16px; color: #030303;">
+  <div>
+    &copy; 2023 apexadvocates.in. All rights reserved. Developed by <a href="https://www.globalsouthstrategies.com/" target="_blank" style="color: #fc0909; text-decoration: none;">Global South Strategies</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

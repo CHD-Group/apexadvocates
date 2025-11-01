@@ -1,0 +1,14 @@
+#Remove .html and .php extension
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.php [L]
+
+#Remove for example deatiled-research.php?id=abc to deatiled-research/abc and internally redirect to deatiled-research.php?id=abc
+RewriteRule ^detailed-research/([a-zA-Z0-9_-]+)$ detailed-research.php?id=$1 [QSA,L]
+
+#Remove for example deatiled-research.php?slug=123 to deatiled-research/123 and internally redirect to deatiled-research.php?slug=123
+RewriteRule ^detailed-article/([a-zA-Z0-9_-]+)/?$ detailed-article.php?slug=$1 [QSA,L]
+
+RewriteEngine On
+RewriteRule ^hello$ test.php [L]
