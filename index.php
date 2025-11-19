@@ -256,33 +256,6 @@ $result_media = $conn->query($sql_media);
     easing: 'ease-in-out'
   });
 </script>
-        <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll("#slider .slide");
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.add("hidden");
-        if (i === index) slide.classList.remove("hidden");
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-// Auto Slide every 4 seconds
-setInterval(nextSlide, 4000);
-
-// Show first slide on load
-showSlide(currentSlide);
-</script>
-
+       
 </body>
 </html>
