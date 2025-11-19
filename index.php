@@ -23,13 +23,6 @@ $result_media = $conn->query($sql_media);
   <!-- favicon -->
     <link rel="icon" href="Image/india.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ===================== SIMPLE 2-IMAGE SLIDER ===================== -->
-<div class="simple-slider">
-    <!-- Put your 2 images in an "images" folder next to index.php -->
-    <img src="Images/slider1.jpg" alt="Slide 1" class="slide active">
-    <img src="Images/slider2.jpg" alt="Slide 2" class="slide">
-</div>   
     
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Neuton Font -->
