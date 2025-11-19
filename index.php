@@ -84,6 +84,65 @@ $result_media = $conn->query($sql_media);
 </section>
 <h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
+        <!-- Swiper CSS (put in <head> if not already there) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- ========== ONE SLIDER WITH YOUR 2 UPLOADED IMAGES ========== -->
+<div class="my-slider swiper">
+    <div class="swiper-wrapper">
+
+        <!-- YOUR IMAGE 1 - just upload and rename to slide1.jpg (or change name below) -->
+        <div class="swiper-slide">
+            <img src="images/slider1.jpg" alt="Your First Image" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <!-- YOUR IMAGE 2 - just upload and rename to slide2.jpg (or change name below) -->
+        <div class="swiper-slide">
+            <img src="images/slider2.jpg" alt="Your Second Image" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Arrows (optional - you can delete if you don't want them) -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<style>
+    .my-slider {
+        width: 100%;
+        height: 70vh;           /* change height here if needed */
+        margin: 20px 0;
+    }
+    .my-slider img {
+        display: block;
+    }
+</style>
+
+<!-- Swiper JS (put just before closing </body> tag) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    new Swiper('.my-slider', {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+</script>
+
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
