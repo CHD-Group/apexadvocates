@@ -23,6 +23,81 @@ $result_media = $conn->query($sql_media);
   <!-- favicon -->
     <link rel="icon" href="Image/india.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===================== SIMPLE 2-IMAGE SLIDER ===================== -->
+<div class="simple-slider">
+    <!-- Put your 2 images in an "images" folder next to index.php -->
+    <img src="Images/slider1.jpg" alt="Slide 1" class="slide active">
+    <img src="Images/slider2.jpg" alt="Slide 2" class="slide">
+</div>
+
+<!-- Optional dots -->
+<div class="dots">
+    <span class="dot active" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+<!-- ================================================================= -->
+
+<style>
+    .simple-slider {
+        width: 100%;
+        height: 70vh;                /* change height if you want */
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+    }
+    .simple-slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0; left: 0;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    .simple-slider img.active {
+        opacity: 1;
+    }
+    .dots {
+        text-align: center;
+        padding: 15px 0;
+    }
+    .dot {
+        display: inline-block;
+        width: 12px; height: 12px;
+        margin: 0 8px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .dot.active { background: #333; }
+</style>
+
+<script>
+    let index = 0;
+    function showSlide() {
+        const slides = document.querySelectorAll('.simple-slider img');
+        const dots   = document.querySelectorAll('.dot');
+
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+
+        index = index >= slides.length ? 0 : index;
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+
+        index++;
+        setTimeout(showSlide, 4000); // change every 4 seconds
+    }
+
+    function currentSlide(n) {
+        index = n - 1;
+        showSlide();
+    }
+
+    // Start the slider
+    showSlide();
+</script>        
     
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Neuton Font -->
