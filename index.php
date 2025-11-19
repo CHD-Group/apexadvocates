@@ -84,61 +84,51 @@ $result_media = $conn->query($sql_media);
 </section>
 <h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
-        <!-- Slider Container -->
-<div class="slider">
-  <div class="slides">
-    <!-- Slide 1 -->
-    <div class="slide">
-      <img src="image1.jpg" alt="Slide 1">
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="slide">
-      <img src="image2.jpg" alt="Slide 2">
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide">
-      <img src="image3.jpg" alt="Slide 3">
-    </div>
-  </div>
-</div>
-
+        <!-- SLIDER START -->
 <style>
-/* Slider styling */
-.slider {
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
+.slider-container {
   position: relative;
+  max-width: 100%;
+  height: 400px; /* adjust height */
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.slides {
-  display: flex;
-  width: 300%;
-  animation: slide 12s infinite;
-}
-
-.slide {
+.slider-container img {
   width: 100%;
-  flex: 1 0 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 450px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-/* Animation */
-@keyframes slide {
-  0% { transform: translateX(0%); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
+.slider-container img.active {
+  opacity: 1;
 }
 </style>
+
+<div class="slider-container">
+  <img src="slider1.jpg" class="active">
+  <img src="slider2.jpg">
+  <img src="image3.jpg">
+</div>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slider-container img");
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[slideIndex].classList.add("active");
+
+  slideIndex = (slideIndex + 1) % slides.length;
+}
+
+setInterval(showSlides, 3000); // change every 3 seconds
+</script>
+<!-- SLIDER END -->
+
 
 
 <!-- Latest Research Papers Section -->
