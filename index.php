@@ -84,6 +84,37 @@ $result_media = $conn->query($sql_media);
 </section>
 <h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
+        <!-- ===== Simple Image Slider Start ===== -->
+<div class="relative w-full overflow-hidden max-h-[450px] mt-6" id="slider">
+
+    <!-- Slides -->
+    <div class="slide hidden">
+        <img src="Image/slider1.jpg" class="w-full h-[450px] object-cover">
+    </div>
+
+    <div class="slide hidden">
+        <img src="Image/slider2.jpg" class="w-full h-[450px] object-cover">
+    </div>
+
+    <div class="slide hidden">
+        <img src="Image/slider3.jpg" class="w-full h-[450px] object-cover">
+    </div>
+
+    <!-- Left Button -->
+    <button onclick="prevSlide()" 
+            class="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white px-4 py-2 rounded-full">
+        ‹
+    </button>
+
+    <!-- Right Button -->
+    <button onclick="nextSlide()" 
+            class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white px-4 py-2 rounded-full">
+        ›
+    </button>
+</div>
+<!-- ===== Simple Image Slider End ===== -->
+
+
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -225,5 +256,33 @@ $result_media = $conn->query($sql_media);
     easing: 'ease-in-out'
   });
 </script>
+        <script>
+let currentSlide = 0;
+const slides = document.querySelectorAll("#slider .slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.add("hidden");
+        if (i === index) slide.classList.remove("hidden");
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Auto Slide every 4 seconds
+setInterval(nextSlide, 4000);
+
+// Show first slide on load
+showSlide(currentSlide);
+</script>
+
 </body>
 </html>
