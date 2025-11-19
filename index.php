@@ -84,52 +84,6 @@ $result_media = $conn->query($sql_media);
 </section>
 <h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
-        <!-- SLIDER START -->
-<style>
-.slider-container {
-  position: relative;
-  max-width: 100%;
-  height: 400px; /* adjust height */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.slider-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slider-container img.active {
-  opacity: 1;
-}
-</style>
-
-<div class="slider-container">
-  <img src="slider1.jpg" class="active">
-  <img src="slider2.jpg">
-  <img src="image3.jpg">
-</div>
-
-<script>
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slider-container img");
-
-function showSlides() {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[slideIndex].classList.add("active");
-
-  slideIndex = (slideIndex + 1) % slides.length;
-}
-
-setInterval(showSlides, 3000); // change every 3 seconds
-</script>
-<!-- SLIDER END -->
-
-
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
