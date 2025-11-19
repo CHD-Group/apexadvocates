@@ -84,6 +84,62 @@ $result_media = $conn->query($sql_media);
 </section>
 <h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
+        <!-- Slider Container -->
+<div class="slider">
+  <div class="slides">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <img src="image1.jpg" alt="Slide 1">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="image2.jpg" alt="Slide 2">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+  </div>
+</div>
+
+<style>
+/* Slider styling */
+.slider {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Animation */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+</style>
+
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
