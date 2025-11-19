@@ -21,7 +21,7 @@ $result_media = $conn->query($sql_media);
   <meta charset="UTF-8">
   <title>Apex Advocates</title>
   <!-- favicon -->
-    <link rel="icon" href="Image/Dr. Edmond Fernandes            Official.png" type="image/x-icon">
+    <link rel="icon" href="Image/india.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://cdn.tailwindcss.com"></script>
