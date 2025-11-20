@@ -83,58 +83,6 @@ $result_media = $conn->query($sql_media);
   <img src="Image/india.jpg" alt="india" class=" w-full h-full object-cover object-top">
 </section>
 
-        <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-<!-- Hero Slider Section -->
-<section class="hero-section relative">
-  <div class="swiper myHeroSlider">
-    <div class="swiper-wrapper">
-
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="Image/slider1.jpg" alt="india" class="w-full h-[220px] sm:h-[300px] lg:h-[850px] object-cover object-top">
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="Image/slider2.jpg" alt="second" class="w-full h-[220px] sm:h-[300px] lg:h-[850px] object-cover object-top">
-      </div>
-
-    </div>
-
-    <!-- Pagination Dots -->
-    <div class="swiper-pagination"></div>
-
-    <!-- Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Slider Script -->
-<script>
-  var swiper = new Swiper(".myHeroSlider", {
-    loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
-
-<h2 class="text-2xl lg:text-4xl text-center font-bold text-black-600 mb-4 mt-4 lg:mt-10">Apex Advocates | Your partner for legal peace</h2>
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
