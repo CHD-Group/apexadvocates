@@ -83,6 +83,50 @@ $result_media = $conn->query($sql_media);
   <img src="Image/india.jpg" alt="india" class=" w-full h-full object-cover object-top">
 </section>
 
+        <style>
+.slider {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .slider { height: 300px; }
+}
+
+@media (min-width: 1024px) {
+  .slider { height: 850px; }
+}
+
+.slides {
+  display: flex;
+  width: 200%;
+  animation: slide 6s infinite;
+}
+
+.slides img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  45%  { transform: translateX(0); }
+  55%  { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<div class="slider">
+  <div class="slides">
+    <img src="Image/slider1.jpg" alt="Slide 1">
+    <img src="Image/slider2.jpg" alt="Slide 2">
+  </div>
+</div>
+
+
 
 <!-- Latest Research Papers Section -->
 <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
